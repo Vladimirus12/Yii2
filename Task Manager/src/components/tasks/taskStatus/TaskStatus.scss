@@ -1,0 +1,58 @@
+.status{
+	&__wrapper {
+		width: 272px;
+		margin: 8px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 0;
+		flex-shrink: 1;
+		border: 1px solid lightgray;
+		border-radius: 2px;
+		background: #ebecf0;
+	}
+
+	&_title {
+		width: calc(100% - 16px);
+		margin: 4px 8px;
+		background: transparent;
+		border: 1px solid transparent;
+		font-weight: bold;
+
+		&__form_item:focus {
+			background: white;
+			border: 1px solid #40a9ff;
+		}
+	}
+
+	&__tasks {
+		height: 100%;
+		min-height: 20px;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 0 8px;
+		overflow-y: auto;
+	}
+
+	&__button{
+		padding: 6px 8px;
+
+		&:hover {
+			background: #c8c9cd;
+			color: black;
+			cursor: pointer;
+		}
+	}
+}
+
+.task__card {
+	margin-bottom: 8px;
+	border: 1px solid lightgray;
+	border-radius: 2px;
+	background: white;
+	box-shadow: 0 1px 0 rgba(9,30,66,.25)
+}
+

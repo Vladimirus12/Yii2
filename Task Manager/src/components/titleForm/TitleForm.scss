@@ -1,0 +1,39 @@
+.Title {
+	&__wrapper {
+		display: flex;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		margin-left: 10px;
+	}
+
+	&__button {
+		padding: 5px;
+		background: black;
+		border-radius: 3px;
+		color: white;
+		cursor: pointer;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		&_status {
+			width: 272px;
+			border-radius: 3px;
+		}
+
+		&_item {
+			margin-bottom: 0;
+		}
+
+		&_button_wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}

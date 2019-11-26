@@ -1,0 +1,7 @@
+{
+	"extends": [
+		"react-app",
+		"onvis",
+		"plugin:react/recommended"
+	]
+}

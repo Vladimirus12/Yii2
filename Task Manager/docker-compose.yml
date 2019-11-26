@@ -1,0 +1,54 @@
+version: '3.0'
+
+services:
+
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    depends_on:
+      - php
+    volumes:
+      - ./docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/log:/var/log/nginx
+      - ./:/var/www/html/
+
+  php:
+    restart: always
+    build:
+      context: ./docker/php
+    volumes:
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+<<<<<<< HEAD
+      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./:/var/www/html/
+=======
+#      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./:/var/www/html/
+    environment:
+      YII_ENV: prod
+      YII_DEBUG: false
+>>>>>>> remotes/origin/authorization_and_UsersController
+
+  php-cli:
+    build:
+      context: ./docker/php
+      dockerfile: php-cli.docker
+    volumes:
+      - ./:/app
+      - ./docker/composer:/root/.composer/cache
+
+  mysql:
+    restart: always
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: team_dev
+<<<<<<< HEAD
+
+=======
+>>>>>>> remotes/origin/authorization_and_UsersController

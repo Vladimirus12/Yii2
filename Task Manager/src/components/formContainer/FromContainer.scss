@@ -1,0 +1,20 @@
+.Add, .Task {
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		&_status {
+			width: 272px;
+			border-radius: 3px;
+		}
+
+		&_item {
+			margin-bottom: 0;
+		}
+
+		&_button_wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}

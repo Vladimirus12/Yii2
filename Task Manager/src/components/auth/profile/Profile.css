@@ -1,0 +1,18 @@
+.profile-form {
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.profile-form h2 {
+	text-align: center;
+}
+
+.profile-form-button {
+	width: 100%;
+}
+
+.profile-form-change {
+	display: block;
+	margin-bottom: 24px;
+	text-align: center;
+}

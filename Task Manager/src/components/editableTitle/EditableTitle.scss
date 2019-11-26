@@ -1,0 +1,25 @@
+.Editable {
+	&__title {
+		width: calc(100% - 16px);
+		margin: 4px 8px;
+		padding: 4px;
+		background: transparent;
+		border: 1px solid transparent;
+		font-weight: bold;
+		//outline: 0;
+		//cursor: pointer;
+		//border: none;
+
+		&__title:hover {
+			cursor: pointer;
+			outline: 0;
+			border: none;
+		}
+
+		&__form_item:focus {
+			background: white;
+			border: 1px solid #40a9ff;
+			outline: 1px;
+		}
+	}
+}

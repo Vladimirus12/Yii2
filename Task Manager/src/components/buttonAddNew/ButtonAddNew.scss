@@ -1,0 +1,19 @@
+.add {
+	&__button {
+		padding: 6px 8px;
+		height: fit-content;
+
+		&:hover {
+			background: #c8c9cd;
+			color: black;
+			cursor: pointer;
+		}
+
+		&_status {
+			width: 272px;
+			border-radius: 3px;
+			margin: 8px;
+			border: solid 1px #c8c9cd;
+		}
+	}
+}
